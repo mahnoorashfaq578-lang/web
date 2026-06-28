@@ -1,0 +1,417 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+/* Navbar */
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100px;
+    padding:0 25px;
+    background-color:rgb(248, 233, 241);
+    z-index:1000;
+}
+
+.logo{
+    width:70px;
+    height:70px;
+}
+
+.title{
+    font-size:35px;
+    color:#e4547f;
+    margin-left:10px;
+}
+
+ul{
+    display:flex;
+    gap:50px;
+    list-style:none;
+    margin-left:auto;
+    font-size: 30px;
+}
+.link{
+    display:inline-block;
+    text-decoration:none;
+    color:#e4547f;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.link:hover{
+    color:#2e1c23;
+    transform:translateY(-5px);
+}
+.right{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-left:30px;
+}
+
+.search{
+    padding:10px 18px;
+    border-radius:20px;
+    border:2px solid #e4547f;
+    outline:none;
+}
+
+i{
+    font-size:22px;
+    color: #e4547f;
+}
+
+.btn{
+    width:140px;
+    height:50px;
+    border:2px solid black;
+    background: #e4547f;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+    color:#e4547f;
+    box-shadow:5px 5px 5px #e4547f;
+}
+
+/* Hamburger */
+
+#check{
+    display:none;
+}
+
+.menu-btn{
+    display:none;
+    font-size:35px;
+    color:#60320e;
+    cursor:pointer;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .navbar{
+        height:80px;
+        padding:0 20px;
+    }
+
+    .logo{
+        width:55px;
+        height:55px;
+    }
+
+    .title{
+        font-size:26px;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .right{
+        display:none;
+    }
+
+    ul{
+        position:absolute;
+        top:80px;
+        left:-100%;
+        width:100%;
+        background:rgb(223,217,211);
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+        padding:30px 0;
+        transition:0.4s;
+    }
+
+    #check:checked ~ ul{
+        left:0;
+    }
+
+    .link{
+        font-size:22px;
+    }
+}
+/* home */
+.home{
+    display: flex;
+    align-items: center;
+    background-image: url(cake.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+    height: 70vh;
+    width: 100%;
+    position: relative;
+}
+.head1{
+    color: #e4547f;
+    font-size: 25px;
+    line-height: 1.2;
+    margin-left: 10%;
+}
+.head2{
+    color: #0e0d0d;
+    font-size: 40px;
+    line-height: 1.2;
+     margin-left: 10%;
+}
+
+.spn1{
+    color: #e4547f;
+}
+.para1{
+    font-size: 22px;
+    width: 500px;
+     margin-left: 10%;
+}
+.btn1 , .btn2{
+    line-height: 1.2;
+    margin-top: 10%;
+    margin-left: 10%;
+   padding: 10px 20px;
+   font-size: 20px;
+   font-weight: bolder;
+   border: 2px solid #e4547f;
+   border-radius: 10px;
+}
+.btn1{
+    color: white;
+    background-color: #e4547f;
+}
+.btn1 i{
+    color: white;
+}
+.btn2{
+    color: #0e0d0d;
+    background-color: white;
+    
+}
+.btn2{
+    transition: 0.3s;
+}
+
+.btn2:hover{
+    box-shadow: 0 0 20px #e4547f;
+}
+
+ .btn1{
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(90deg,#ff6b9d,#ffb347,#ff6b9d);
+    background-size: 300% 300%;
+    transition: 0.3s;
+}
+
+.btn1:hover{
+    animation: gradientMove 3s ease infinite;
+    transform: translateY(-4px);
+}
+
+ @keyframes gradientMove{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+} 
+@media screen and (max-width:760px){
+
+    .home{
+      
+        padding: 80px 20px;
+      min-height: 70vh;
+    }
+
+    .home-content{
+        width: 100%;
+    }
+
+    .head1{
+        font-size: 20px;
+        margin-left: 0;
+    }
+
+    .head2{
+        font-size: 28px;
+        margin-left: 0;
+    }
+
+    .para1{
+        font-size: 18px;
+        width: 100%;
+        max-width: 300px;
+        margin-left: 0;
+     color: rgb(37, 34, 35);
+    }
+
+    .btn1,
+    .btn2{
+        margin-top: 15px;
+        margin-left: 0;
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+}
+/* bottombar */
+.bottombar{
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    height: 20vh;
+    background-color: #f5e1e8;
+    /* border: 2px solid #e4547f; */
+    
+}
+.box{
+    line-height: 1.6;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 20px;
+    transition: 0.3s;
+}
+.box i{
+    font-size: 28px;
+}
+ .box p{
+    font-size: 18px;
+ }
+
+.box:hover{
+    transform: translateY(-8px);
+}
+@media screen and (max-width:760px){
+    .bottombar{
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    .box{
+        font-size: 24px;
+    }
+}
+/* about */
+.about{
+    height: 70vh;
+    background-image: url(about.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img1{
+    height: 400px;
+    width: 500px;
+
+}
+.about-head{
+   margin-left: 10%;
+}
+.head3{
+   
+ font-size: 40px;
+color: #e4547f;
+padding-top: 10%;
+}
+.para2{
+width: 40%;
+ padding-bottom: 12%;
+ margin-top: 5%;
+font-size: 25px;
+ line-height: 1.4;
+ color: #0e0d0d;
+
+}
+.about-bottom{
+   height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 25px;
+    background-color: #fdf4fd;
+}
+.box2{
+ font-size: 23px;
+ transition: 0.9;
+}
+.box2 i {
+    font-size: 30px;
+    text-align: center;
+}
+@media (max-width:760px){
+
+.about{
+    height: auto;
+    flex-direction: column;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-head{
+    margin-left: 0;
+}
+
+.head3{
+    font-size: 32px;
+    padding-top: 0;
+    margin-bottom: 20px;
+}
+
+.para2{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 0;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.img1{
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.about-bottom{
+    height: auto;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px 20px;
+}
+
+.box2{
+    font-size: 20px;
+}
+
+.box2 i{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+}
